@@ -24,6 +24,8 @@ for i, row in ipairs(data) do
     end
 end
 
+-- Produces the bar graph and saves it to a file
+-- auto scales the graph based on the number of bars
 local function collectBarGraph(countryCounts, numBars, graphName, barColorRGB)
     -- calculating imageWidth
     local barWidth = 20

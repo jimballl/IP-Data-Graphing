@@ -1,3 +1,4 @@
+-- Corresponding acronyms for countries and ISPs
 local countryNamesAndISP = {
     ["Internet Service Provider"] = "isp",
     ["Hosting Company"] = "hosting",
