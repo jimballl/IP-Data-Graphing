@@ -5,7 +5,7 @@ local gd = require "gd"
 local parseCSV = require 'ParseCSV'
 
 -- parsing our example data to graph
-local data = parseCSV("ip_company_sample.csv")
+local data = parseCSV("Input Data//ip_company_sample.csv")
 
 -- determining the country counts directly from the csv
 local countryCounts = {}
@@ -52,5 +52,7 @@ end
 local redRGB = {255, 0, 0}
 local blueRGB = {0, 0, 255}
 
-collectBarGraph(countryCounts, graphHelpers.CountKeys(countryCounts), "country_counts.png", redRGB)
-collectBarGraph(countryCountsFromAPI, graphHelpers.CountKeys(countryCountsFromAPI), "country_counts_from_api.png", blueRGB)
+local outputLocationWithoutAPI = "Graph Output//iplocations.png"
+local outputLocationWithAPI = "Graph Output//iplocations_from_api.png"
+collectBarGraph(countryCounts, graphHelpers.CountKeys(countryCounts), outputLocationWithoutAPI, redRGB)
+collectBarGraph(countryCountsFromAPI, graphHelpers.CountKeys(countryCountsFromAPI), outputLocationWithAPI, blueRGB)
